@@ -20,8 +20,12 @@ env:
   CI_BUILD_DIR: public
 
 jobs:
-  build:
+  deploy:
+    name: Deploy (notes.sigpwny.com)
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
     steps:
       - uses: actions/checkout@v4
         with:
